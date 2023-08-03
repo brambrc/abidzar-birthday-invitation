@@ -1,17 +1,36 @@
-// server.js
 const express = require('express');
 const app = express();
 const path = require('path');
 
-const PORT = 5522; // Choose any available port
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static(path.join(__dirname)));
-
-// Define a route to handle the prefix URL
-app.get('/:prefix', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+app.get('*', (req, res) => {
+  const prefix = req.url.replace('/', '');
+  const html = `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Background</title>
+        <link rel="stylesheet" href="./asset/styles.css">
+    </head>
+    <body>
+        <div>
+            <div class="invitation"> 
+                <h2 class="color-first">Hallo ${prefix}</h2>
+                <h2 class="color-second">Kamu Diundang Ke :</h2>
+            </div>
+            <!-- ... Rest of your content ... -->
+        </div>
+        <script src="./asset/script.js"></script>
+    </body>
+    </html>
+  `;
+  res.send(html);
 });
 
-app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
 });
