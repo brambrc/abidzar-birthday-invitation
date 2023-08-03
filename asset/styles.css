@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'MaryKate';
+    src: url('marykate.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: PeaceSans;
+    src: url('peacesans.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('montserrat.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('your-image2.png') center top no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+}
+
+.invitation {
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    width: 90%;
+    text-align: left;
+}
+
+.event {
+    position: absolute;
+    top: 18%;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+}
+
+.information {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+}
+
+.color-first {
+    font-family: 'MaryKate';
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
+.color-second {
+    font-family: 'MaryKate';
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-top: 1rem;
+    color: #FFA953;
+}
+
+.abidzars-class {
+    font-family: 'PeaceSans';
+    font-weight: 200;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-top: 1rem;
+    color: #FFA953;
+}
+
+.birthday-class {
+    font-family: 'PeaceSans';
+    font-size: 3rem;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-top: 0rem;
+    color: #ffffff;
+}
+
+.date-class {
+    font-family: 'PeaceSans';
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-top: 0rem;
+    color: #FFA953;
+}
+
+.day-time {
+    font-family: 'PeaceSans';
+    font-weight: 200;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-top: 0rem;
+    color: #FFA953;
+}
+
+.place {
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-top: 0rem;
+    color: #ffffff;
+}
+
+.address {
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-size: 0.6rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 0rem;
+    color: #ffffff;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    right: 0;
+}
+
+.custom-button {
+    font-family: 'MaryKate', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-image: linear-gradient(135deg, #403274, #271D50, #FEA953);
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.spacer {
+    height: 300px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* Responsive font sizes for smaller screens */
+@media (max-width: 768px) {
+    .color-first {
+        font-size: 2.5rem;
+    }
+
+    .color-second {
+        font-size: 2.5rem;
+    }
+
+    .abidzars-class {
+        font-size: 2.5rem;
+    }
+
+    .birthday-class {
+        font-size: 2.5rem;
+    }
+
+    .date-class {
+        font-size: 1.8rem;
+    }
+
+    .day-time {
+        font-size: 1rem;
+    }
+
+    .place {
+        font-size: 1.2rem;
+    }
+
+    .address {
+        font-size: 0.5rem;
+    }
+
+    .custom-button {
+        font-size: 1.3rem;
+    }
+}
+
+/* ... Your existing CSS code ... */
